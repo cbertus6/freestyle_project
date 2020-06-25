@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 
 
 from yelp.client import Client
+import plotly.express as px 
 import plotly.graph_objects as go
 
 
@@ -14,7 +15,7 @@ load_dotenv()
 
 OPEN_YELP_API_KEY = os.getenv("YELP_API_KEY")
 client = Client(OPEN_YELP_API_KEY)
-MY_ZIP = os.getenv("MY_ZIP", default="73103") 
+# MY_ZIP = os.getenv("MY_ZIP", default="73103") 
 
 
 request_url = "https://api.yelp.com/v3/businesses/search"
@@ -56,10 +57,11 @@ longitude = []
 name = []
 
 for b in parsed_response['businesses']:
-    # print(b['name'])
+    print(b['name'])
     latitude.append(b['coordinates']['latitude'])
     longitude.append(b['coordinates']['longitude'])
     name.append(b['name'])
+
 
 
 
@@ -83,8 +85,8 @@ fig.update_layout(
         accesstoken=mapbox_access_token,
         bearing=0,
         center=dict(
-            lat=38.92,
-            lon=-77.07
+            lat=['latitude'],
+            lon=['longitude']
         ),
         pitch=0,
         zoom=10
