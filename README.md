@@ -29,6 +29,15 @@ From inside the virtual environment, install package dependices:
 ```
 pip install -r requirements.txt
 ```
+## Setup
+
+Before using or developing this application, you will need to [obtain a Yelp API key](https://www.yelp.com/developers/documentation/v3/authentication) (ex: "abc123").
+
+After obtaining an API key, create a new file in this repository called ".env," and update the contents of the ".env" file to specify your real API key:
+
+```
+YELP_API_KEY = "abc123"
+```
 
 ## Usage
 Run the recommendation script:
