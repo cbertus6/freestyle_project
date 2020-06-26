@@ -16,10 +16,6 @@ load_dotenv()
 OPEN_YELP_API_KEY = os.getenv("YELP_API_KEY")
 client = Client(OPEN_YELP_API_KEY)
 
-
-
-
-
 request_url = "https://api.yelp.com/v3/businesses/search"
 HEADERS = {'Authorization': 'bearer %s' % OPEN_YELP_API_KEY} 
 
@@ -31,7 +27,6 @@ location = input("Location: ")
 search_term = input("Food type (Italian, tacos, Thai, etc...): ")
 price_range = input("Price range 1($) - 4($$$$): ")
 limit_results = input("Number of business results to return: ")
-
 
 
 parameters= {'term':search_term,
@@ -68,7 +63,8 @@ for b in parsed_response['businesses']:
 print("--------------------")
 print("Enjoy!")
 
-#MAP INFO
+
+# MAP INFO
 
 OPEN_MAPBOX_ACCESS_TOKEN = os.getenv("MAPBOX_ACCESS_TOKEN")
 
@@ -101,14 +97,9 @@ fig.show()
 
 
  
-
-
-
-#TODO
-# licences?
-
-
 # SOURCES
+# https://github.com/prof-rossetti/intro-to-python
 # https://www.yelp.com/developers/documentation/v3/business_search
 # https://www.youtube.com/watch?v=GJf7ccRIK4U
+# https://plotly.com/python/scattermapbox/
 
