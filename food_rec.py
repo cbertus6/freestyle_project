@@ -28,7 +28,7 @@ print("THANKS FOR USING YELP BUSINESS SEARCH")
 print("TO BEGIN, PLEASE ENTER THE FOLLOWING CRITERIA TO HELP WITH YOUR SEARCH:")
 
 location = input("Location: ")
-search_term = input("Food type: ")
+search_term = input("Food type (Italian, tacos, Thai, etc...): ")
 price_range = input("Price range 1($) - 4($$$$): ")
 limit_results = input("Number of business results to return: ")
 
