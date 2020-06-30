@@ -23,6 +23,7 @@ HEADERS = {'Authorization': 'bearer %s' % OPEN_YELP_API_KEY}
 print("THANKS FOR USING YELP BUSINESS SEARCH")
 print("TO BEGIN, PLEASE ENTER THE FOLLOWING CRITERIA TO HELP WITH YOUR SEARCH:")
 
+# These are the user input terms 
 location = input("Location: ")
 search_term = input("Food type (Italian, tacos, Thai, etc...): ")
 price_range = input("Price range 1($) - 4($$$$): ")
